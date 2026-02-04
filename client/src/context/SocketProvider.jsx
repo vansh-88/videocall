@@ -11,8 +11,8 @@ export const useSocket=()=>{
 
 export const SocketProvider = ({children}) => {
 
-    const socket = useMemo(() => io('https://videocall-7hfb.onrender.com'), []);
-    // const socket = useMemo(() => io('http://localhost:3000'), []);
+    // const socket = useMemo(() => io('https://videocall-7hfb.onrender.com'), []);
+    const socket = useMemo(() => io('http://localhost:3000'), []);
 
 
   return (
