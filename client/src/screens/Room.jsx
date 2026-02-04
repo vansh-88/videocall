@@ -69,6 +69,10 @@ const RoomPage = () => {
         await peer.setLocalDescription(data.answer);
     }, []);
 
+    const unmuteRemote = () => {
+            remoteVideoRef.current.muted = !remoteVideoRef.current.muted;
+    };
+
     // Listen for new user
     useEffect(() => {
         socket.on('user-connected', handleUserJoined);
@@ -139,6 +143,8 @@ const RoomPage = () => {
                         playsInline
                         style={{ width: "200px", height: "120px", background: "#000" }}
                     ></video>
+
+                    <button onClick={unmuteRemote}>Mute / Unmute</button>
                 </div>
             )}
             {remoteStream && (
@@ -151,6 +157,8 @@ const RoomPage = () => {
                         playsInline
                         style={{ width: "200px", height: "120px", background: "#000" }}
                     ></video>
+
+                    
                 </div>
             )}
         </div>
