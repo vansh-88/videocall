@@ -109,7 +109,7 @@ body {
   border-color: rgba(99,102,241,0.6);
 }
 
-..primary-btn {
+.primary-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
